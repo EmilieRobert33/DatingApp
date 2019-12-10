@@ -21,8 +21,7 @@ export class MemberDetailComponent implements OnInit {
 
   ngOnInit() {
     this.route.data.subscribe(data => {
-      // tslint:disable-next-line: no-string-literal
-      this.user = data['user'];
+      this.user = data.user;
     });
 
     this.galleryOptions = [
@@ -35,24 +34,19 @@ export class MemberDetailComponent implements OnInit {
         preview: false
       }
     ];
- 
     this.galleryImages = this.getImages();
+  }
+
+  getImages() {
+    const imageUrls = [];
+    // tslint:disable-next-line: prefer-for-of
+    for (let i = 0; i < this.user.photos.length; i++) {
+      imageUrls.push({
+        small: this.user.photos[i].url,
+        medium: this.user.photos[i].url,
+        large: this.user.photos[i].url,
+      });
     }
-
-    getImages() {
-      const imageUrls = [];
-      // tslint:disable-next-line: prefer-for-of
-      for (let i = 0; i < this.user.photos.length; i++) {
-        imageUrls.push({
-          small: this.user.photos[i].url,
-          medium: this.user.photos[i].url,
-          large: this.user.photos[i].url,
-        });
-      }
-      return imageUrls;
-    }
-
-  
-
-
+    return imageUrls;
+  }
 }

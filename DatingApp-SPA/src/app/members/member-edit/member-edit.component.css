@@ -1,0 +1,11 @@
+.img-thumbail {
+    margin: 25px;
+    width: 85%;
+    height: 85%;
+}
+
+.card-body {
+    padding : 0 25 px;
+    background-color: white;;
+    border-top: none;
+}
