@@ -12,13 +12,13 @@
       <li class="nav-item" routerLinkActive="active">
         <a class="nav-link" [routerLink]="['/messages']">Messages</a>
       </li>
-      <li class="nav-item" routerLinkActive="active">
-        <a class="nav-link" [routerLink]="['/members/member-edit']">edit</a>
-      </li>
     </ul>
   
     <div *ngIf="loggedIn()" class="dropdown ml-auto" dropdown>
       <a class=" dropdown-toggle text-light" dropdownToggle>
+        <span class="mr-1">
+          <img src="{{photoUrl}}" alt="photo de profil">
+        </span>
         Welcome {{authService.decodedToken?.unique_name | titlecase}}
       </a>
     
