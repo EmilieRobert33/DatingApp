@@ -14,9 +14,6 @@ import { SelectControlValueAccessor } from '@angular/forms';
   styleUrls: ['./photo-editor.component.css']
 })
 export class PhotoEditorComponent implements OnInit {
-  faTrash = faTrash;
-  faUpload = faUpload;
-  faBan = faBan;
   @Input()photos: Photo[];
   @Output() getMemberPhotoChange = new EventEmitter<string>();
   uploader: FileUploader;
@@ -60,6 +57,11 @@ export class PhotoEditorComponent implements OnInit {
           isMain : res.isMain
         };
         this.photos.push(photo);
+        if (photo.isMain) {
+          this.authService.changeMemberPhoto(photo.url);
+          this.authService.currentUser.photoUrl = photo.url;
+          localStorage.setItem('user', JSON.stringify(this.authService.currentUser));
+        }
 
       }
     };

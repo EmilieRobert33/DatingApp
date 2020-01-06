@@ -8,7 +8,7 @@
         [disabled]="photo.isMain">Main</button>
       <button type="button" class="btn btn-sm btn-danger" 
         (click)="deletePhoto(photo.id)"
-        [disabled]="photo.isMain"><fa-icon [icon]="faTrash"></fa-icon></button>
+        [disabled]="photo.isMain"><span class="fa fa-trash "></span></button>
     </div>
   </div>
 </div>
@@ -24,7 +24,7 @@
            (fileOver)="fileOverBase($event)"
            [uploader]="uploader"
            class="card bg-faded p-3 text-center mb-3 my-drop-zone">
-           <fa-icon [icon]="faUpload" class="fa-3x"></fa-icon>
+           <span class="fa fa-upload fa-3x"></span>
            Base drop zone
       </div>     
 
@@ -64,11 +64,11 @@
           </div>
           <button type="button" class="btn btn-success btn-s"
                   (click)="uploader.uploadAll()" [disabled]="!uploader.getNotUploadedItems().length">
-              <span ><fa-icon [icon]="faUpload"></fa-icon></span> Upload
+              <span class="fa fa-upload"></span> Upload
           </button>
           <button type="button" class="btn btn-warning btn-s"
                   (click)="uploader.cancelAll()" [disabled]="!uploader.isUploading">
-              <span class=""><fa-icon [icon]="faBan"></fa-icon></span> Cancel
+              <span class="fa fa-ban"></span> Cancel
           </button>
           <button type="button" class="btn btn-danger btn-s"
                   (click)="uploader.clearQueue()" [disabled]="!uploader.queue.length">
