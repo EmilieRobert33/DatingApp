@@ -4,7 +4,7 @@
 
 <div class="container">
 
-  <form class="form-inline" #form="ngForm" (ngSubmit)="loadUser()" novalidate>
+  <form class="form-inline" #form="ngForm" (ngSubmit)="loadUsers()" novalidate>
     <div class="form-group">
       <label for="minAge">Age de</label>
       <input type="number" class="form-control ml-1" style="width: 70px" id="minAge" 
@@ -32,9 +32,9 @@
     <div class="col">
       <div class="btn-group float-right">
         <button type="button" name="orderBy" class="btn btn-primary"
-        [(ngModel)]="userParams.orderBy" (click)="loadUser()" btnRadio="lastActive">dernière activité</button>
+        [(ngModel)]="userParams.orderBy" (click)="loadUsers()" btnRadio="lastActive">dernière activité</button>
         <button type="button" name="orderBy" class="btn btn-primary"
-        [(ngModel)]="userParams.orderBy" (click)="loadUser()" btnRadio="created">Membres créés le + proche</button>
+        [(ngModel)]="userParams.orderBy" (click)="loadUsers()" btnRadio="created">Membres créés le + proche</button>
       </div>
     </div>
 
