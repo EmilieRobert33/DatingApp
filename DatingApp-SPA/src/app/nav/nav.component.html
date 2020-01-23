@@ -23,10 +23,10 @@
       </a>
     
       <div class="dropdown-menu mt-3" *bsDropdownMenu>
-        <a class="dropdown-item" [routerLink]="['/members/member-edit']"><fa-icon [icon]="faUser"></fa-icon>Edit Profil</a>
+        <a class="dropdown-item" [routerLink]="['/members/member-edit']"><fa-icon [icon]="faUser"></fa-icon>Modif Profil</a>
         <div class="dropDown-divider"></div>  
         <a class="dropdown-item"(click)="logOut()">
-          <fa-icon [icon]="faSignOutAlt"></fa-icon>Logout</a>        
+          <fa-icon [icon]="faSignOutAlt"></fa-icon>Deconnexion</a>        
       </div>
     </div>
   
@@ -35,7 +35,7 @@
         [(ngModel)]="model.username" required>
       <input class="form-control mr-sm-2" type="password" name="password" placeholder="Password" 
       [(ngModel)]="model.password" required>
-      <button [disabled]="!loginForm.valid" class="btn btn-success my-2 my-sm-0" type="submit">Login</button>
+      <button [disabled]="!loginForm.valid" class="btn btn-success my-2 my-sm-0" type="submit">connexion</button>
     </form>
   </div> 
 </nav>

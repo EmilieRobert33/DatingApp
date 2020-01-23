@@ -43,7 +43,7 @@
       <table class="table">
           <thead>
           <tr>
-              <th width="50%">Name</th>
+              <th width="50%">Nom</th>
               <th>Size</th>         
           </tr>
           </thead>
@@ -57,7 +57,7 @@
 
       <div>
           <div>
-              Queue progress:
+            progression:
               <div class="progress mb-4">
                   <div class="progress-bar" role="progressbar" [ngStyle]="{ 'width': uploader.progress + '%' }"></div>
               </div>
@@ -68,11 +68,11 @@
           </button>
           <button type="button" class="btn btn-warning btn-s"
                   (click)="uploader.cancelAll()" [disabled]="!uploader.isUploading">
-              <span class="fa fa-ban"></span> Cancel
+              <span class="fa fa-ban"></span> Annuler
           </button>
           <button type="button" class="btn btn-danger btn-s"
                   (click)="uploader.clearQueue()" [disabled]="!uploader.queue.length">
-              <span class="fa fa-trash "></span> Remove
+              <span class="fa fa-trash "></span> retirer
           </button>
       </div>
   </div>

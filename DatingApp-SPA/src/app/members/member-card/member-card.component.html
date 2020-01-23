@@ -5,7 +5,8 @@
       <li class="list-inline-item"><button class="btn btn-primary" 
         [routerLink]="['/member/', user.id]"><fa-icon [icon]="faUser" ></fa-icon></button></li>
       <li class="list-inline-item"><button class="btn btn-primary" (click)="sendLike(user.id)"><fa-icon [icon]="faHeart"></fa-icon></button></li>
-      <li class="list-inline-item"><button class="btn btn-primary"><fa-icon [icon]="faEnvelope"></fa-icon></button></li>
+      <li class="list-inline-item"><button class="btn btn-primary"
+        [routerLink]="['/member/', user.id]" [queryParams]="{tab: 3}" ><fa-icon [icon]="faEnvelope"></fa-icon></button></li>
     </ul>
   </div>
   <div class="card-body p-1">
