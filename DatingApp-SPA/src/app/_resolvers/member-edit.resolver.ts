@@ -19,7 +19,7 @@ export class MemberEditResolver implements Resolve<User> {
     resolve(route: ActivatedRouteSnapshot): Observable<User> {
         return this.userService.getUser(this.authService.decodedToken.nameid).pipe(
             catchError(error => {
-                this.alertify.error('problem retrieving data in edit-memeber');
+                this.alertify.error('Problème pour récupérer les détails du membre à éditer');
                 this.router.navigate(['/members']);
                 return of(null);
            })

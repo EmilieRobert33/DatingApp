@@ -35,8 +35,8 @@ namespace DatingApp.API
                 });
 
             services.AddControllers();
-            services.AddDbContext<DataContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("DatingAppConnexion")));
+            services.AddDbContext<DataContext>(options => options           
+                .UseSqlServer(Configuration.GetConnectionString("DatingAppConnexion")));
             services.AddCors();
             services.Configure<CloudinarySettings>(Configuration.GetSection("CloudinarySettings"));
             services.AddAutoMapper(typeof(Startup));
@@ -62,6 +62,45 @@ namespace DatingApp.API
                 });
             services.AddScoped<LogUserActivity>();
             
+        }
+
+        //development environment
+        public void ConfigureDevelopmentServices(IServiceCollection services)
+        {
+            services.AddMvc(option => option.EnableEndpointRouting = false)
+                .AddNewtonsoftJson(opt => {
+                    opt.SerializerSettings.ReferenceLoopHandling =
+                        Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+                });
+
+            services.AddControllers();
+            services.AddDbContext<DataContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("DatingAppDevConnexion")));
+            services.AddCors();
+            services.Configure<CloudinarySettings>(Configuration.GetSection("CloudinarySettings"));
+            services.AddAutoMapper(typeof(Startup));
+            services.AddTransient<Seed>();
+            services.AddScoped<IAuthRepository, AuthRepository>();
+            services.AddScoped<IDatingRepository, DatingRepository>();
+
+            services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            })
+                .AddJwtBearer(options =>
+                {
+                    options.TokenValidationParameters = new TokenValidationParameters
+                    {
+                        ValidateIssuerSigningKey = true,
+                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8
+                            .GetBytes(Configuration.GetSection("AppSettings:Token").Value)),
+                        ValidateIssuer = false,
+                        ValidateAudience = false
+                    };
+                });
+            services.AddScoped<LogUserActivity>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -95,13 +134,18 @@ namespace DatingApp.API
             app.UseAuthorization();
             app.UseAuthentication();
             //seeder.SeedUser();
-            app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+            app.UseCors(x => x.AllowAnyOrigin()
+                .AllowAnyMethod().AllowAnyHeader());
             app.UseMvc();
+            app.UseDefaultFiles();
+            app.UseStaticFiles();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller}/{action=Index}/{id?}");
+
+                endpoints.MapFallbackToController("Index", "Fallback");
             });
         }
     }

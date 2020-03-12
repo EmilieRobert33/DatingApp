@@ -1,0 +1,454 @@
+
+{
+  "header": {
+    "reportVersion": 1,
+    "event": "Allocation failed - JavaScript heap out of memory",
+    "trigger": "FatalError",
+    "filename": "report.20200205.145553.19316.0.001.json",
+    "dumpEventTime": "2020-02-05T14:55:53Z",
+    "dumpEventTimeStamp": "1580910953495",
+    "processId": 19316,
+    "cwd": "C:\\Users\\emili\\OneDrive\\Bureau\\formation\\AnuglarASP.NET\\DatingApp\\DatingApp-SPA",
+    "commandLine": [
+      "C:\\Users\\emili\\DEV\\node.exe",
+      "C:\\Users\\emili\\OneDrive\\Bureau\\formation\\AnuglarASP.NET\\DatingApp\\DatingApp-SPA\\node_modules\\jest-worker\\build\\workers\\processChild.js"
+    ],
+    "nodejsVersion": "v12.12.0",
+    "wordSize": 64,
+    "arch": "x64",
+    "platform": "win32",
+    "componentVersions": {
+      "node": "12.12.0",
+      "v8": "7.7.299.13-node.12",
+      "uv": "1.32.0",
+      "zlib": "1.2.11",
+      "brotli": "1.0.7",
+      "ares": "1.15.0",
+      "modules": "72",
+      "nghttp2": "1.39.2",
+      "napi": "5",
+      "llhttp": "1.1.4",
+      "http_parser": "2.8.0",
+      "openssl": "1.1.1d",
+      "cldr": "35.1",
+      "icu": "64.2",
+      "tz": "2019a",
+      "unicode": "12.1"
+    },
+    "release": {
+      "name": "node",
+      "headersUrl": "https://nodejs.org/download/release/v12.12.0/node-v12.12.0-headers.tar.gz",
+      "sourceUrl": "https://nodejs.org/download/release/v12.12.0/node-v12.12.0.tar.gz",
+      "libUrl": "https://nodejs.org/download/release/v12.12.0/win-x64/node.lib"
+    },
+    "osName": "Windows_NT",
+    "osRelease": "10.0.17763",
+    "osVersion": "Windows 10 Home",
+    "osMachine": "x86_64",
+    "cpus": [
+      {
+        "model": "Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz",
+        "speed": 2592,
+        "user": 2807765,
+        "nice": 0,
+        "sys": 2962921,
+        "idle": 54858390,
+        "irq": 441187
+      },
+      {
+        "model": "Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz",
+        "speed": 2592,
+        "user": 1867500,
+        "nice": 0,
+        "sys": 1654265,
+        "idle": 57106953,
+        "irq": 51109
+      },
+      {
+        "model": "Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz",
+        "speed": 2592,
+        "user": 2804218,
+        "nice": 0,
+        "sys": 1449937,
+        "idle": 56374562,
+        "irq": 33343
+      },
+      {
+        "model": "Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz",
+        "speed": 2592,
+        "user": 1385296,
+        "nice": 0,
+        "sys": 858218,
+        "idle": 58385203,
+        "irq": 16312
+      },
+      {
+        "model": "Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz",
+        "speed": 2592,
+        "user": 2151375,
+        "nice": 0,
+        "sys": 1066265,
+        "idle": 57411078,
+        "irq": 30109
+      },
+      {
+        "model": "Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz",
+        "speed": 2592,
+        "user": 1342984,
+        "nice": 0,
+        "sys": 674937,
+        "idle": 58610796,
+        "irq": 19546
+      },
+      {
+        "model": "Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz",
+        "speed": 2592,
+        "user": 2315406,
+        "nice": 0,
+        "sys": 1228312,
+        "idle": 57084984,
+        "irq": 24781
+      },
+      {
+        "model": "Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz",
+        "speed": 2592,
+        "user": 1493546,
+        "nice": 0,
+        "sys": 614218,
+        "idle": 58520937,
+        "irq": 16828
+      },
+      {
+        "model": "Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz",
+        "speed": 2592,
+        "user": 2976531,
+        "nice": 0,
+        "sys": 1157421,
+        "idle": 56494750,
+        "irq": 33296
+      },
+      {
+        "model": "Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz",
+        "speed": 2592,
+        "user": 1290421,
+        "nice": 0,
+        "sys": 686343,
+        "idle": 58651937,
+        "irq": 20218
+      },
+      {
+        "model": "Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz",
+        "speed": 2592,
+        "user": 2207125,
+        "nice": 0,
+        "sys": 957609,
+        "idle": 57463968,
+        "irq": 30125
+      },
+      {
+        "model": "Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz",
+        "speed": 2592,
+        "user": 2485281,
+        "nice": 0,
+        "sys": 1149781,
+        "idle": 56993640,
+        "irq": 25984
+      }
+    ],
+    "networkInterfaces": [
+      {
+        "name": "Wi-Fi",
+        "internal": false,
+        "mac": "a0:51:0b:47:39:a2",
+        "address": "2a01:cb19:65:a300:cc84:c0a5:7b9d:e2e5",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "Wi-Fi",
+        "internal": false,
+        "mac": "a0:51:0b:47:39:a2",
+        "address": "2a01:cb19:65:a300:e8e6:48d6:a7d3:537b",
+        "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "Wi-Fi",
+        "internal": false,
+        "mac": "a0:51:0b:47:39:a2",
+        "address": "fe80::cc84:c0a5:7b9d:e2e5",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 4
+      },
+      {
+        "name": "Wi-Fi",
+        "internal": false,
+        "mac": "a0:51:0b:47:39:a2",
+        "address": "192.168.1.11",
+        "netmask": "255.255.255.0",
+        "family": "IPv4"
+      },
+      {
+        "name": "Loopback Pseudo-Interface 1",
+        "internal": true,
+        "mac": "00:00:00:00:00:00",
+        "address": "::1",
+        "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "Loopback Pseudo-Interface 1",
+        "internal": true,
+        "mac": "00:00:00:00:00:00",
+        "address": "127.0.0.1",
+        "netmask": "255.0.0.0",
+        "family": "IPv4"
+      }
+    ],
+    "host": "NORMANDY"
+  },
+  "javascriptStack": {
+    "message": "No stack.",
+    "stack": [
+      "Unavailable."
+    ]
+  },
+  "nativeStack": [
+    {
+      "pc": "0x00007ff7b6121369",
+      "symbol": "std::basic_ostream<char,std::char_traits<char> >::operator<<+10873"
+    },
+    {
+      "pc": "0x00007ff7b61256fc",
+      "symbol": "std::basic_ostream<char,std::char_traits<char> >::operator<<+28172"
+    },
+    {
+      "pc": "0x00007ff7b61246a8",
+      "symbol": "std::basic_ostream<char,std::char_traits<char> >::operator<<+23992"
+    },
+    {
+      "pc": "0x00007ff7b621314b",
+      "symbol": "v8::base::CPU::has_sse+37723"
+    },
+    {
+      "pc": "0x00007ff7b6a16d3e",
+      "symbol": "v8::Isolate::ReportExternalAllocationLimitReached+94"
+    },
+    {
+      "pc": "0x00007ff7b69fed81",
+      "symbol": "v8::SharedArrayBuffer::Externalize+833"
+    },
+    {
+      "pc": "0x00007ff7b68cc64c",
+      "symbol": "v8::internal::Heap::EphemeronKeyWriteBarrierFromCode+1436"
+    },
+    {
+      "pc": "0x00007ff7b68d79f0",
+      "symbol": "v8::internal::Heap::ProtectUnprotectedMemoryChunks+1312"
+    },
+    {
+      "pc": "0x00007ff7b68d4524",
+      "symbol": "v8::internal::Heap::PageFlagsAreConsistent+3204"
+    },
+    {
+      "pc": "0x00007ff7b68c9db3",
+      "symbol": "v8::internal::Heap::CollectGarbage+1283"
+    },
+    {
+      "pc": "0x00007ff7b68c8584",
+      "symbol": "v8::internal::Heap::AddRetainedMap+2356"
+    },
+    {
+      "pc": "0x00007ff7b68e9855",
+      "symbol": "v8::internal::Factory::NewFillerObject+53"
+    },
+    {
+      "pc": "0x00007ff7b6656029",
+      "symbol": "v8::internal::interpreter::JumpTableTargetOffsets::iterator::operator=+4057"
+    },
+    {
+      "pc": "0x00007ff7b6e42a5d",
+      "symbol": "v8::internal::SetupIsolateDelegate::SetupHeap+567949"
+    },
+    {
+      "pc": "0x000003bb1dee2923",
+      "symbol": ""
+    }
+  ],
+  "javascriptHeap": {
+    "totalMemory": 2151194624,
+    "totalCommittedMemory": 2151194624,
+    "usedMemory": 2133889984,
+    "availableMemory": 48931872,
+    "memoryLimit": 2197815296,
+    "heapSpaces": {
+      "read_only_space": {
+        "memorySize": 262144,
+        "committedMemory": 262144,
+        "capacity": 261872,
+        "used": 32296,
+        "available": 229576
+      },
+      "new_space": {
+        "memorySize": 2097152,
+        "committedMemory": 2097152,
+        "capacity": 1047488,
+        "used": 145016,
+        "available": 902472
+      },
+      "old_space": {
+        "memorySize": 2040115200,
+        "committedMemory": 2040115200,
+        "capacity": 2026034568,
+        "used": 2025902904,
+        "available": 131664
+      },
+      "code_space": {
+        "memorySize": 1736704,
+        "committedMemory": 1736704,
+        "capacity": 1365024,
+        "used": 1365024,
+        "available": 0
+      },
+      "map_space": {
+        "memorySize": 1314816,
+        "committedMemory": 1314816,
+        "capacity": 928320,
+        "used": 928320,
+        "available": 0
+      },
+      "large_object_space": {
+        "memorySize": 105619456,
+        "committedMemory": 105619456,
+        "capacity": 105512872,
+        "used": 105512872,
+        "available": 0
+      },
+      "code_large_object_space": {
+        "memorySize": 49152,
+        "committedMemory": 49152,
+        "capacity": 3552,
+        "used": 3552,
+        "available": 0
+      },
+      "new_large_object_space": {
+        "memorySize": 0,
+        "committedMemory": 0,
+        "capacity": 1047488,
+        "used": 0,
+        "available": 1047488
+      }
+    }
+  },
+  "resourceUsage": {
+    "userCpuSeconds": 110.781,
+    "kernelCpuSeconds": 2.828,
+    "cpuConsumptionPercent": 222.763,
+    "maxRss": 2268200960,
+    "pageFaults": {
+      "IORequired": 1360588,
+      "IONotRequired": 0
+    },
+    "fsActivity": {
+      "reads": 885,
+      "writes": 112
+    }
+  },
+  "libuv": [
+  ],
+  "environmentVariables": {
+    "ALLUSERSPROFILE": "C:\\ProgramData",
+    "APPDATA": "C:\\Users\\emili\\AppData\\Roaming",
+    "CommonProgramFiles": "C:\\Program Files\\Common Files",
+    "CommonProgramFiles(x86)": "C:\\Program Files (x86)\\Common Files",
+    "CommonProgramW6432": "C:\\Program Files\\Common Files",
+    "COMPUTERNAME": "NORMANDY",
+    "ComSpec": "C:\\Windows\\system32\\cmd.exe",
+    "dp0": "C:\\Users\\emili\\AppData\\Roaming\\npm\\",
+    "DriverData": "C:\\Windows\\System32\\Drivers\\DriverData",
+    "FORCE_COLOR": "1",
+    "HOMEDRIVE": "C:",
+    "HOMEPATH": "\\Users\\emili",
+    "JEST_WORKER_ID": "4",
+    "LOCALAPPDATA": "C:\\Users\\emili\\AppData\\Local",
+    "LOGONSERVER": "\\\\NORMANDY",
+    "NUMBER_OF_PROCESSORS": "12",
+    "OneDrive": "C:\\Users\\emili\\OneDrive",
+    "OneDriveConsumer": "C:\\Users\\emili\\OneDrive",
+    "OS": "Windows_NT",
+    "Path": "C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Users\\emili\\DEV\\;C:\\Users\\emili\\DEV\\Git\\cmd;C:\\Program Files (x86)\\Microsoft SQL Server\\140\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\140\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\130\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\140\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\140\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;C:\\Users\\emili\\AppData\\Local\\Microsoft\\WindowsApps;;C:\\Users\\emili\\DEV\\Microsoft VS Code\\bin;C:\\Users\\emili\\AppData\\Roaming\\npm;C:\\Users\\emili\\.dotnet\\tools",
+    "PATHEXT": ".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JSE;.WSF;.WSH;.MSC",
+    "PROCESSOR_ARCHITECTURE": "AMD64",
+    "PROCESSOR_IDENTIFIER": "Intel64 Family 6 Model 158 Stepping 10, GenuineIntel",
+    "PROCESSOR_LEVEL": "6",
+    "PROCESSOR_REVISION": "9e0a",
+    "ProgramData": "C:\\ProgramData",
+    "ProgramFiles": "C:\\Program Files",
+    "ProgramFiles(x86)": "C:\\Program Files (x86)",
+    "ProgramW6432": "C:\\Program Files",
+    "PROMPT": "$P$G",
+    "PSModulePath": "C:\\Program Files\\WindowsPowerShell\\Modules;C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules;C:\\Program Files (x86)\\Microsoft SQL Server\\140\\Tools\\PowerShell\\Modules\\",
+    "PUBLIC": "C:\\Users\\Public",
+    "SESSIONNAME": "Console",
+    "SystemDrive": "C:",
+    "SystemRoot": "C:\\Windows",
+    "TEMP": "C:\\Users\\emili\\AppData\\Local\\Temp",
+    "TMP": "C:\\Users\\emili\\AppData\\Local\\Temp",
+    "USERDOMAIN": "NORMANDY",
+    "USERDOMAIN_ROAMINGPROFILE": "NORMANDY",
+    "USERNAME": "emili",
+    "USERPROFILE": "C:\\Users\\emili",
+    "WEBPACK_DEV_SERVER": "true",
+    "windir": "C:\\Windows",
+    "_prog": "node"
+  },
+  "sharedObjects": [
+    "C:\\Users\\emili\\DEV\\node.exe",
+    "C:\\Windows\\SYSTEM32\\ntdll.dll",
+    "C:\\Program Files\\AVAST Software\\Avast\\aswhook.dll",
+    "C:\\Windows\\System32\\KERNEL32.DLL",
+    "C:\\Windows\\System32\\KERNELBASE.dll",
+    "C:\\Windows\\System32\\WS2_32.dll",
+    "C:\\Windows\\System32\\RPCRT4.dll",
+    "C:\\Windows\\System32\\ADVAPI32.dll",
+    "C:\\Windows\\System32\\msvcrt.dll",
+    "C:\\Windows\\System32\\sechost.dll",
+    "C:\\Windows\\System32\\USER32.dll",
+    "C:\\Windows\\System32\\win32u.dll",
+    "C:\\Windows\\System32\\GDI32.dll",
+    "C:\\Windows\\System32\\gdi32full.dll",
+    "C:\\Windows\\System32\\msvcp_win.dll",
+    "C:\\Windows\\System32\\ucrtbase.dll",
+    "C:\\Windows\\System32\\PSAPI.DLL",
+    "C:\\Windows\\System32\\CRYPT32.dll",
+    "C:\\Windows\\System32\\MSASN1.dll",
+    "C:\\Windows\\System32\\bcrypt.dll",
+    "C:\\Windows\\SYSTEM32\\dbghelp.dll",
+    "C:\\Windows\\SYSTEM32\\IPHLPAPI.DLL",
+    "C:\\Windows\\SYSTEM32\\USERENV.dll",
+    "C:\\Windows\\System32\\profapi.dll",
+    "C:\\Windows\\SYSTEM32\\WINMM.dll",
+    "C:\\Windows\\SYSTEM32\\WINMMBASE.dll",
+    "C:\\Windows\\System32\\cfgmgr32.dll",
+    "C:\\Windows\\System32\\IMM32.DLL",
+    "C:\\Windows\\System32\\powrprof.dll",
+    "C:\\Windows\\system32\\uxtheme.dll",
+    "C:\\Windows\\System32\\combase.dll",
+    "C:\\Windows\\System32\\bcryptPrimitives.dll",
+    "C:\\Windows\\system32\\mswsock.dll",
+    "C:\\Windows\\System32\\kernel.appcore.dll",
+    "C:\\Windows\\System32\\NSI.dll",
+    "C:\\Windows\\SYSTEM32\\dhcpcsvc6.DLL",
+    "C:\\Windows\\SYSTEM32\\dhcpcsvc.DLL",
+    "C:\\Windows\\SYSTEM32\\DNSAPI.dll",
+    "C:\\Windows\\system32\\napinsp.dll",
+    "C:\\Windows\\system32\\pnrpnsp.dll",
+    "C:\\Windows\\System32\\winrnr.dll",
+    "C:\\Windows\\system32\\NLAapi.dll",
+    "C:\\Windows\\system32\\wshbth.dll"
+  ]
+}

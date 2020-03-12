@@ -97,7 +97,7 @@ namespace DatingApp.API.Controllers
                 return CreatedAtRoute("GetPhoto", new { userId, id = photo.Id }, photoToReturn);
             }
 
-            return BadRequest("Could not add the photo");
+            return BadRequest("Impossible d'ajouter la photo");
         }
 
         [HttpPost("{id}/setMain")]
@@ -114,7 +114,7 @@ namespace DatingApp.API.Controllers
             var photoFromRepo = await _repo.GetPhoto(id);
 
             if (photoFromRepo.IsMain)
-                return BadRequest("this is already the main photo");
+                return BadRequest("Ceci est déjà la photo principale");
 
             var currentMainPhoto = await _repo.GetMainPhotoForUser(userId);
 
@@ -125,7 +125,7 @@ namespace DatingApp.API.Controllers
             if (await _repo.SaveAll())
                 return NoContent();
 
-            return BadRequest("Could not set photo to main");
+            return BadRequest("impossible de rendre cette photo principale");
 
         }
 
@@ -143,7 +143,7 @@ namespace DatingApp.API.Controllers
             var photoFromRepo = await _repo.GetPhoto(id);
 
             if (photoFromRepo.IsMain)
-                return BadRequest("you cannot delete the main photo");
+                return BadRequest("Vous ne pouvez pas supprimer la photo principale");
 
             //si photo vient de cloudinary
             if (photoFromRepo.PublicId != null)
@@ -167,7 +167,7 @@ namespace DatingApp.API.Controllers
             if (await _repo.SaveAll())
                 return Ok();
 
-            return BadRequest("failed to delete the photo");
+            return BadRequest("La photo n'a pas pu être supprimée");
         }
             
 

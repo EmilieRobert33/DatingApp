@@ -1,11 +1,12 @@
 <div class="container mt-4">
   <div class="row">
     <div class="col-sm-4">
-        <h1>Your Profile</h1>
+        <h1>Votre profil</h1>
     </div>
     <div class="col-sm-8">
       <div *ngIf="editForm.dirty" class="alert alert-info">
-        <strong>Information: </strong> Changes have benn made, you might want save them...
+        <strong>Information: </strong> des modifications ont été effectuées, 
+                                        vous devriez les auvegardées...
       </div>
     </div>
   </div>
@@ -23,11 +24,11 @@
             <p>{{user.age}}</p>
           </div>
           <div>
-            <strong>Last Active:</strong>
+            <strong>dernière acitivté:</strong>
             <p>{{user.lastActive | timeAgo}}</p>
           </div>
           <div>
-            <strong>Member since:</strong>
+            <strong>Membre depuis:</strong>
             <p>{{user.created | date: 'mediumDate'}}</p>
           </div>
         </div>
@@ -46,17 +47,17 @@
               <h4>Description</h4>
               <textarea name="introduction" cols="30" rows="6" class="form-control"
                 [(ngModel)]="user.introduction"></textarea>
-              <h4>Looking For</h4>
+              <h4>Recherche</h4>
               <textarea name="lookingFor" cols="30" rows="6" class="form-control"
                 [(ngModel)]="user.lookingFor"></textarea>
-              <h4>Interests</h4>
+              <h4>Interêts</h4>
               <textarea name="interests" cols="30" rows="6" class="form-control"
                 [(ngModel)]="user.interests"></textarea>
-                <h4>Location Details:</h4>
+                <h4>Localisation:</h4>
                 <div class="form-inline">
-                  <label for="city">City</label>
+                  <label for="city">Ville</label>
                   <input class="form-control" type="text" name="city" [(ngModel)]="user.city">
-                  <label for="country">Country</label>
+                  <label for="country">Pays</label>
                   <input class="form-control" type="text" name="country" [(ngModel)]="user.country">
                 </div>
             </form>

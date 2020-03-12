@@ -2,7 +2,7 @@
 <div class="card">
   <div class="card-body">
     <div *ngIf= "messages?.length === 0 ">
-      <p>pas encore de messages... dite salut en utilisant le chat système !</p>
+      <p>pas encore de messages... dites salut en utilisant le chat système !</p>
     </div>
 
     <ul class="chat">
@@ -32,8 +32,8 @@
             <div class="header">
             <small class="text-muted ">
               <span class="fa fa-clock-o">{{message.messageSent | timeAgo}}</span>
-              <span *ngIf="!message.isRead" class="text-danger">(unread)</span>
-              <span *ngIf="message.isRead" class="text-success">(Read {{message.dateRead | timeAgo}})</span>
+              <span *ngIf="!message.isRead" class="text-danger">(Non lus)</span>
+              <span *ngIf="message.isRead" class="text-success">(Lu {{message.dateRead | timeAgo}})</span>
 
             </small>
             <strong class="primary-font float-right">{{message.senderKnownAs}}</strong>      
